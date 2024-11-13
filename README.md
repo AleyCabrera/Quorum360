@@ -22,5 +22,5 @@ Este proyecto utiliza tecnologías modernas como React y Tailwind CSS para garan
 
 Es un proyectos CSR (Client-Side Rendering)
 
-![alt text](image.png)
+![alt text](/src/asset/image/imgEstruProy.png)
 

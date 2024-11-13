@@ -1,0 +1,448 @@
+/*Variables*/
+:root {/*Establece variables de CSS personalizadas que contienen valores específicos para reutilizar en todo el documento.*/
+    --azul-marinno: #1F3B4D;
+        --cian: #17BEBB;
+        --gris-claro: #F0F0F0;
+        --blanco-puro: #FFFFFF;
+        --gris-oscuro: #515151;
+        --font-family: 'Roboto', sans-serif;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+}
+
+/*Glogal*/
+* {/*Establece un estilo para todos los elementos HTML.*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {/*Establece un estilo para el cuerpo del documento.*/
+    font-family: var(--font-family);
+    font-size: var(--md);
+    background-color: var(--gris-claro);
+    color: var(--azul-marinno);
+}
+
+img {/*Establece un estilo para las imágenes.*/
+    max-width: 100%;
+    height: auto;
+}
+
+a {/*Establece un estilo para los enlaces.*/
+    text-decoration: none;
+    color: var(--azul-marinno);
+}
+
+h1, h2, h3, h4, h5, h6 {/*Establece un estilo para los títulos del documento.*/
+    font-family: var(--font-family);
+    color: var(--azul-marinno);
+}
+
+/*Header*/
+header {/*Establece un estilo para el encabezado del documento.*/
+    background-color: var(--azul-marinno);
+    color: var(--blanco-puro);
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;/*Establece un estilo para el encabezado del documento cuando se desplaza fijandolo al hacer scroll.*/
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--gris-oscuro) 0px 2px 10px;
+}
+
+header img {/*Establece un estilo para las imágenes dentro del encabezado.*/
+    max-height: 60px;
+    margin-left: 25px;
+}
+
+header nav {/*Establece un estilo para la navegación dentro del encabezado.*/
+    margin-right: 25px;
+    
+}
+
+.header_nav .header_list {/*Establece un estilo para las listas dentro de la navegación del encabezado.*/
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {/*Establece un estilo para los elementos de la lista de navegación.*/
+    color: var(--blanco-puro);
+    padding: 10px;
+    font-size: var(--sm);
+}
+
+header .item:hover {/*Establece un estilo para los elementos de la lista de navegación cuando el cursor está sobre ellos.*/
+    background-color: var(--cian);
+    border-radius: 5px;
+    box-shadow: var(--gris-claro) 2px 2px 4px;
+}
+
+.header_auth {/*Establece un estilo para la autenticación dentro del encabezado.*/
+    display: flex;
+    margin-right: 20px;
+    gap: 1rem;
+}
+
+.header_auth a {/*Establece un estilo para la autenticación dentro del encabezado.*/
+    color: var(--blanco-puro);
+    padding: 5px 10px;
+    margin-left: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.header_auth .sign_in {/*Establece un estilo para la autenticación dentro del encabezado.*/
+    background-color: var(--cian);
+    border-radius: 5px;
+}
+
+.header_auth .sign_in:hover {/*Establece un estilo para la autenticación dentro del encabezado cuando el cursor está sobre ellos.*/
+    background-color: var(--gris-oscuro);
+    border-radius: 5px;
+    box-shadow: var(--gris-claro) 2px 2px 4px;
+}
+
+.header_auth .registre {/*Establece un estilo para la autenticación dentro del encabezado.*/
+    background-color: var(--blanco-puro);
+    color: var(--azul-marinno);
+    border-radius: 5px;
+}
+
+.header_auth .registre:hover {
+    /*Establece un estilo para la autenticación dentro del encabezado cuando el cursor está sobre ellos.*/
+    background-color: var(--gris-oscuro);
+    border-radius: 5px;
+    color: var(--blanco-puro);
+    box-shadow: var(--gris-claro) 2px 2px 4px;
+}
+
+/*Main*/
+main {
+    /*Establece un estilo para el contenido principal del documento.*/
+    padding: 1px;
+}
+
+/*hero*/
+.hero {
+    /*Establece un estilo para el héroe del documento.*/
+    background-color: var(--gris-claro);
+    text-align: center;
+    padding: 2rem 0;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;*/
+}
+
+.hero_logo {
+    /*Establece un estilo para el logotipo del héroe.*/
+    max-width: 100%;
+    height: auto;
+}
+
+.hero_buttons .btn {
+    /*Establece un estilo para los botones del héroe.*/
+    background-color: var(--cian);
+    border: none;
+    padding: 1rem 2rem;
+    color: var(--blanco-puro);
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    /*display: flex;
+    gap: 1rem;*/
+}
+
+/*Gallery
+.gallery {
+    display: flex;
+}
+
+.gallery img {
+    width: 50%;
+    height: auto;
+}*/
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--gris-claro);
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.gallery_slider {
+    display: flex;
+    width: calc(200%);
+    animation: slide 20s infinite linear;
+    /*gap: 1rem;
+    transition: transform 0.5s;*/
+}
+
+.gallery_slide {
+    flex: 0 0 auto;
+    width: 25%;
+    min-width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery_image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery_image:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/*@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}*/
+
+/*testimonials*/
+.testimonials {
+    background-color: var(--gris-claro);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.testimonials_title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--azul-marinno);
+    margin-bottom: 1rem;
+}
+
+.testimonials_description {
+    font-size: 1.2rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 2rem;
+}
+
+.testimonials_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    background-color: var(--blanco-puro);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.testimonial:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cargo {
+    font-size: 0.8rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.testimonial_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;/*Establece un radio de esquina para el borde de un elemento.*/
+    object-fit: cover;/*Establece cómo se ajusta el contenido de un elemento de imagen.*/
+    margin-right: 15px;
+    border: 3px solid var(--cian);
+    transition: border-color 0.3s ease;
+}
+
+.testimonial:hover .testimonial_img {
+    border-color: var(--azul-marinno);
+}
+
+.testimonial_content {
+    flex-grow: 1;
+}
+
+.testimonial_content p {
+    font-size: 0.85rem;
+    color: var(--azul-marinno);
+}
+
+/*Footer*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: auto;
+    background-color: var(--gris-claro);
+    padding: 2rem;
+    border-top: 1px solid var(--azul-marinno);
+    font-family: var(--font-family);
+    text-align: end;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+/*logo y redes*/
+.footer_logo_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    /*justify-content: center;*/
+    /*
+    margin-top: 0.1rem;*/
+    /*max-width: 30px;
+    margin-right: 1rem;
+    gap: 1rem;*/
+}
+
+.footer_logo_socials img {
+    width: 60px;
+    margin-right: 1rem;
+    padding: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer_socials {
+    display: flex;
+    gap: 1px;
+}
+
+.footer_social_link img {
+    width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer_social_link img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/*link*/
+.footer_links {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    color: var(--azul-marinno);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--azul-marinno);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer_title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--azul-marinno);
+    margin-bottom: 1rem;
+}
+
+.footer_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_list li {
+    margin-bottom: 0.5rem;
+}
+
+.footer_list a {
+    text-decoration: none;
+    color: var(--azul-marinno);
+    transition: color 0.3s ease;
+}
+
+.footer_list a:hover {
+    color: var(--cian);
+}
+
+.copy {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: var(--azul-marinno);
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+}

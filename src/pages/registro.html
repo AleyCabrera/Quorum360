@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--Se utiliza la etiqueta DOCTYPE  para informa al navegador qué versión de HTML (o XML) se usó para escribir el documento.-->
+<html lang="es"><!--Establece el idioma del documento usando el atributo lang -->
+
+<head><!--Contiene información general sobre el documento, como el título, los estilos y los metadatos.-->
+    <meta charset="UTF-8"><!--Establece la codificación de caracteres para el documento.-->
+    <meta name="Quorum360" content="Quorum360 - Software de Administración de Propiedad Horizontal Eficiente y Seguro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Establece la escala de la página y la anchura de la ventana gráfica. permitiendo ser responsive y escalable el codigo-->
+    <meta name="description"
+        content="Optimiza la gestión de condominios con nuestro software especializado para propiedad horizontal. Aplicando la ley 675 de 2001 en Colombia">
+    <!--Establece una descripción de la página. permite mejorar la busqueda y da posicionamiento SEO-->
+    <meta name="robots" content="index, follow">
+    <!--Permite a los motores de búsqueda indexar la página y seguir los enlaces.-->
+    <meta name="keywords"
+        content="propiedad horizontal, ley 675 de 2001, administracion de propiedad horizontal, software, propiedad horizontal software, gestión condominios, administración residencias, Quorum360, gestión financiera de condominios">
+    <!--Establece palabras clave para la página. permite mejorar la busqueda y da posicionamiento SEO-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Establece el modo de compatibilidad del navegador.-->
+    <link rel="icon" href="./asset/iconos/quorum360a.ico" type="image/x-icon"><!--Establece el icono de la página.-->
+    <link rel="stylesheet" type="text/css" href="./styles/stylea_registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Quorum360</title><!--Establece el título de la página.-->
+</head>
+
+<body>
+
+    <header>
+    <div class="img">
+        <a href="index.html">
+            <img src="./asset/image/Q360.png" alt="Quorum360">
+        </a>
+    </div>
+
+    <nav class="header_nav">
+        <ul class="nav_list">
+            <a class="item" href="inicio_secion.html">Administrador</a>
+            <a class="item" href="inicio_secion.html">Residente</a>
+            <a class="item" href="#">Comunidad</a>
+            <a class="item" href="#">Servicios</a>
+            <a class="item" href="#">Soporte</a>
+            <a class="item" href="#">Contacto</a>
+        </ul>
+    </nav>
+        
+        <div class="header_auth">
+            <a href="inicio_secion.html" class="sign_in">Iniciar Sesión</a>
+            <a href="registro.html" class="sign_in">Registrarse</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="register">
+                <div class="form-container">
+                    <div class="conatiner">
+                        <h2>Registro</h2>
+                    </div>
+
+                    <form action="#" class="form" method="POST">
+                        <label for="nombre-propiedad">Nombre</label>
+                        <input type="text" id="nombre-propiedad" name="nombre-propiedad" placeholder="Juan" class="input input-password" required>
+                    </form>
+
+                    <form action="#" class="form" method="POST">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Cortez" class="input input-password" required>
+                    </form>
+
+                    <form action="#" class="form"
+                    method="POST">
+                        <label for="opcion">Seleccione</label>
+                        <select id="opcion" name="opcion" class="input input-password" required>
+                            <option value=""></option>
+                            <option value="">Administrador</option>
+                            <option value="">Residente</option> 
+                        </select><br>
+
+                        <form action="#" class="form" method="POST">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" placeholder="ejemplo@pip.com" class="input input-password" required>
+                    
+                        <input type="submit" value="Enviar" class="primary-button register-button">
+                        </form>
+
+                        <button class="secondary-button signup-button">Iniciar sesiòn</button>
+                    </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>

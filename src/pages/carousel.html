@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel Automático con Hover</title>
+    <style>
+        .gallery {
+            width: 100vw;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .gallery .carousel {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            -webkit-animation: scroll 40s linear infinite;
+            width: calc(100px * 8);
+        }
+
+        .gallery .carousel-images {
+            width: 300px;
+        }
+
+        .gallery .carousel img {
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes scroll {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+
+            100% {
+                -webkit-transform: translateX(calc(-100px * 4));
+                transform: translateX(calc(-100px * 4));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Carrusel Automático con Hover</h1>
+        <p>Este carrusel se mueve automáticamente, pero se detiene al pasar el mouse sobre las imágenes.</p>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="/src/asset/image/image1.png" alt="Imagen 1">
+            </div>
+
+            <div class="carousel-images">
+                <img src="/src/asset/image/image2.png" alt="Imagen 2">
+            </div>
+            
+            <div class="carousel-images">
+                <img src="/src/asset/image/image3.jpg" alt="Imagen 3">
+            </div>
+
+            <div class="carousel-images">
+                <img src="/src/asset/image/image4.jpg" alt="Imagen 4">
+            </div>
+        </div>
+    </section>
+
+    <!--<script>
+        const imagesContainer = document.querySelector('.carousel-images');
+        const images = imagesContainer.children;
+        const totalImages = images.length;
+        let index = 0;
+        let interval;
+
+        // Función para mover el carrusel automáticamente
+        const moveCarousel = () => {
+            index = (index + 1) % totalImages; // Cambia a la siguiente imagen, vuelve al inicio al llegar al final
+            const imageWidth = images[0].clientWidth; // Obtiene el ancho de una imagen
+            imagesContainer.style.transform = `translateX(${-index * imageWidth}px)`; // Mueve el contenedor
+        };
+
+        // Inicia el movimiento automático
+        const startCarousel = () => {
+            interval = setInterval(moveCarousel, 3000); // Cambia cada 3 segundos
+        };
+
+        // Detiene el movimiento automático
+        const stopCarousel = () => {
+            clearInterval(interval);
+        };
+
+        // Eventos para detener y reanudar el movimiento al pasar el mouse
+        imagesContainer.addEventListener('mouseover', stopCarousel);
+        imagesContainer.addEventListener('mouseout', startCarousel);
+
+        // Inicia el carrusel
+        startCarousel();
+    </script>-->
+</body>
+
+</html>

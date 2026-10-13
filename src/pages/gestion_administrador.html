@@ -17,94 +17,834 @@
     <!--Establece palabras clave para la página. permite mejorar la busqueda y da posicionamiento SEO-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Establece el modo de compatibilidad del navegador.-->
     <link rel="icon" href="./asset/iconos/quorum360a.ico" type="image/x-icon"><!--Establece el icono de la página.-->
-    <link rel="stylesheet" type="text/css" href="./styles/style_gestion_administrador.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/style_gestion_administrador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Quorum360</title><!--Establece el título de la página.-->
 </head>
 
-<body><!--Contiene todo el contenido visible de la página.-->
-    <header><!--Contiene la información de encabezado de la página.-->
-        <div class="img">
-            <a href="index.html">
-                <img src="./asset/image/Q360.png" alt="Quorum360"><!--Establece una imagen en el encabezado de la página.-->
-            </a>
-        </div>
-    
-        <nav class="header_nav"><!--Contiene la información de navegación de la página.-->
-            <ul class="nav_list"><!--Contiene una lista de elementos de navegación.-->
-                <a class="item" href="inicio_secion.html">Administrador</a><!--Establece un enlace de navegación.-->
-                <a class="item" href="inicio_secion.html">Residente</a>
-                <a class="item" href="#">Comunidad</a>
-                <a class="item" href="#">Servicios</a>
-                <a class="item" href="#">Soporte</a>
-                <a class="item" href="#">Contacto</a>
-            </ul>
-        </nav>
-    
-        <div class="header_auth"><!--Contiene botones de autenticación.-->
-            <a href="inicio_secion.html" class="sign_in">Iniciar Sesión</a>
-            <a href="#" class="registre">Registrarse</a>
-        </div>
-    </header>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/images/logo-admin.svg" alt="Quorum360" class="sidebar-logo">
+                <h2>Panel de Administración</h2>
+            </div>
 
-    <main>
-        <Section class="gestions">
-                <h1 class="gestions_title">Administrador</h1>
-                <p class="gestions_description">Gestión Propiedad Horizontal</p>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contabilidad">
+                            <i class="fas fa-calculator"></i>
+                            <span>Contabilidad</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#facturacion">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Facturación</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#finanzas">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Finanzas Copropiedad</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gestion">
+                            <i class="fas fa-building"></i>
+                            <span>Gestión Copropiedad</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pqr">
+                            <i class="fas fa-comments"></i>
+                            <span>PQR</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#configuracion">
+                            <i class="fas fa-cog"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="/assets/images/user-avatar.jpg" alt="Usuario" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                <a href="/logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Gestión Propiedad Horizontal</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <!-- Dashboard Module -->
+                <section id="dashboard" class="module active">
+                    <div class="module-header">
+                        <h2>Resumen General</h2>
+                        <div class="module-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Generar Reporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon bg-blue">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Ingresos Mensuales</h3>
+                                <p>$12,450,000</p>
+                                <span class="stat-change positive">+5% vs mes anterior</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-green">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Pagos Realizados</h3>
+                                <p>87%</p>
+                                <span class="stat-change positive">+3% vs mes anterior</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-orange">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>PQR Pendientes</h3>
+                                <p>12</p>
+                                <span class="stat-change negative">+2 vs mes anterior</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-purple">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Propietarios Activos</h3>
+                                <p>64/72</p>
+                                <span class="stat-change neutral">Sin cambios</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-grid">
+                        <div class="module-card wide">
+                            <h3>Actividades Recientes</h3>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-file-invoice-dollar"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Nueva factura generada para Apartamento 302</p>
+                                        <span class="activity-time">Hace 2 horas</span>
+                                    </div>
+                                </div>
+                                <!-- Más actividades... -->
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h3>Próximas Reuniones</h3>
+                            <div class="meeting-list">
+                                <div class="meeting-item">
+                                    <div class="meeting-date">
+                                        <span class="day">15</span>
+                                        <span class="month">Jun</span>
+                                    </div>
+                                    <div class="meeting-info">
+                                        <p>Asamblea General Ordinaria</p>
+                                        <span class="meeting-time">3:00 PM - Salón Comunal</span>
+                                    </div>
+                                </div>
+                                <!-- Más reuniones... -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contabilidad Module -->
+                <section id="contabilidad" class="module">
+                    <div class="module-header">
+                        <h2>Gestión Contable</h2>
+                        <div class="module-actions">
+                            <div class="dropdown">
+                                <button class="btn btn-outline dropdown-toggle" id="exportDropdown">
+                                    <i class="fas fa-download"></i> Exportar
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item export-option" data-type="excel">Excel</a>
+                                    <a href="#" class="dropdown-item export-option" data-type="pdf">PDF</a>
+                                    <a href="#" class="dropdown-item export-option" data-type="csv">CSV</a>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="nuevoRegistroBtn">
+                                <i class="fas fa-plus"></i> Nuevo Registro
+                            </button>
+                        </div>
+                    </div>
                 
-                <div class="gestions_grid">
-                    <div class="gestion">
-                        <img src="./asset/image/presupuesto.png" alt="Icono Contabilidad"> <!-- Imagen de contabilidad -->
-                        <div class="gestion_content">
-                            <h3 class="gestion_title">Contabilidad</h3>
-                            <p>Gestionar procesos contables y cuentas del conjunto</p>
+                    <div class="accounting-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="cuentas-cobrar">Cuentas por Cobrar</button>
+                            <button class="tab-btn" data-tab="cuentas-pagar">Cuentas por Pagar</button>
+                            <button class="tab-btn" data-tab="balance-general">Balance General</button>
+                            <button class="tab-btn" data-tab="conciliacion">Conciliación Bancaria</button>
+                        </div>
+                
+                        <div class="tabs-content">
+                            <div class="tab-pane active" id="cuentas-cobrar">
+                                <div class="table-controls">
+                                    <div class="search-control">
+                                        <input type="text" id="searchReceivables" placeholder="Buscar...">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="filter-control">
+                                        <select id="filterStatus">
+                                            <option value="all">Todos los estados</option>
+                                            <option value="paid">Pagado</option>
+                                            <option value="pending">Pendiente</option>
+                                            <option value="overdue">Vencido</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="data-table" id="receivablesTable">
+                                        <thead>
+                                            <tr>
+                                                <th data-sort="property">Propiedad <i class="fas fa-sort"></i></th>
+                                                <th data-sort="concept">Concepto <i class="fas fa-sort"></i></th>
+                                                <th data-sort="date">Fecha <i class="fas fa-sort"></i></th>
+                                                <th data-sort="amount">Valor <i class="fas fa-sort"></i></th>
+                                                <th data-sort="status">Estado <i class="fas fa-sort"></i></th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Datos cargados dinámicamente -->
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3">Total:</td>
+                                                <td id="totalReceivables">$0</td>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="table-pagination">
+                                    <button class="btn btn-outline" id="prevPage">Anterior</button>
+                                    <span id="pageInfo">Página 1 de 1</span>
+                                    <button class="btn btn-outline" id="nextPage">Siguiente</button>
+                                </div>
+                            </div>
+                
+                            <!-- Más paneles... -->
                         </div>
                     </div>
-                    
-                    <div class="gestion">
-                        <img src="./asset/image/factura.png" alt="Icono Facturación"> <!-- Imagen de facturación -->
-                        <div class="gestion_content">
-                            <h3 class="gestion_title">Facturación</h3>
-                            <p>Gestión de facturas</p>
+                
+                    <!-- Modal para nuevo registro -->
+                    <div class="modal" id="accountingModal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Nuevo Registro Contable</h3>
+                                <button class="modal-close">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="accountingForm">
+                                    <div class="form-group">
+                                        <label for="accountType">Tipo de Registro</label>
+                                        <select id="accountType" required>
+                                            <option value="income">Ingreso</option>
+                                            <option value="expense">Gasto</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountProperty">Propiedad</label>
+                                        <select id="accountProperty" required>
+                                            <!-- Opciones cargadas dinámicamente -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountConcept">Concepto</label>
+                                        <input type="text" id="accountConcept" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountAmount">Valor</label>
+                                        <input type="number" id="accountAmount" min="0" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountDate">Fecha</label>
+                                        <input type="date" id="accountDate" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountDescription">Descripción</label>
+                                        <textarea id="accountDescription"></textarea>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-outline modal-close">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="gestion">
-                        <img src="./asset/image/admin.png" alt="Icono Finanzas"> <!-- Imagen de finanzas -->
-                        <div class="gestion_content">
-                            <h3 class="gestion_title">Finanzas Copropiedad</h3>
-                            <p>Gestión para generar informes contables importantes</p>
+                </section>
+
+                <!-- Más módulos (Facturación, Finanzas, Gestión, PQR, Configuración) -->
+                <section id="facturacion" class="module">
+                    <div class="module-header">
+                        <h2>Gestión de Facturación</h2>
+                        <div class="module-actions">
+                            <button class="btn btn-primary" id="generateInvoicesBtn">
+                                <i class="fas fa-file-invoice"></i> Generar Facturas
+                            </button>
+                            <button class="btn btn-outline" id="sendRemindersBtn">
+                                <i class="fas fa-envelope"></i> Enviar Recordatorios
+                            </button>
                         </div>
                     </div>
-                    
-                    <div class="gestion">
-                        <img src="./asset/image/gestion.png" alt="Icono Gestión"> <!-- Imagen de gestión -->
-                        <div class="gestion_content">
-                            <h3 class="gestion_title">Gestión Copropiedad</h3>
-                            <p>Área de planificación de reuniones y actas con el concejo y administración</p>
+                
+                    <div class="billing-controls">
+                        <div class="period-selector">
+                            <select id="billingPeriod">
+                                <option value="current">Período Actual</option>
+                                <option value="last">Período Anterior</option>
+                                <option value="custom">Personalizado</option>
+                            </select>
+                            <div class="custom-dates" id="customDatesContainer" style="display: none;">
+                                <input type="date" id="startDate">
+                                <span>a</span>
+                                <input type="date" id="endDate">
+                                <button class="btn btn-sm" id="applyDates">Aplicar</button>
+                            </div>
+                        </div>
+                        <div class="billing-filters">
+                            <select id="invoiceStatusFilter">
+                                <option value="all">Todas</option>
+                                <option value="paid">Pagadas</option>
+                                <option value="pending">Pendientes</option>
+                                <option value="overdue">Vencidas</option>
+                                <option value="cancelled">Anuladas</option>
+                            </select>
                         </div>
                     </div>
-                    
-                    <div class="gestion">
-                        <img src="./asset/image/mensajes.png" alt="Icono PQR"> <!-- Imagen de PQR -->
-                        <div class="gestion_content">
-                            <h3 class="gestion_title">PQR</h3>
-                            <p>Revisión de peticiones, quejas y recursos</p>
+                
+                    <div class="invoices-summary">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-blue">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="summary-info">
+                                <h3>Facturas Generadas</h3>
+                                <p id="totalInvoices">0</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon bg-green">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="summary-info">
+                                <h3>Pagadas</h3>
+                                <p id="paidInvoices">0</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon bg-orange">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="summary-info">
+                                <h3>Pendientes</h3>
+                                <p id="pendingInvoices">0</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon bg-red">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="summary-info">
+                                <h3>Vencidas</h3>
+                                <p id="overdueInvoices">0</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="gestion">
-                        <img src="./asset/image/configuracion.png" alt="Icono Configuración"> <!-- Imagen de configuración -->
-                        <div class="gestion_content">
-                            <h3 class="gestion_title">Configuración</h3>
-                            <p>Área de configuración de perfil y contraseña</p>
+                
+                    <div class="table-responsive">
+                        <table class="data-table" id="invoicesTable">
+                            <thead>
+                                <tr>
+                                    <th>N° Factura</th>
+                                    <th>Propiedad</th>
+                                    <th>Período</th>
+                                    <th>Fecha Emisión</th>
+                                    <th>Vencimiento</th>
+                                    <th>Valor</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Datos cargados dinámicamente -->
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <!-- Modal para generar facturas -->
+                    <div class="modal" id="generateInvoicesModal">
+                        <div class="modal-content large">
+                            <div class="modal-header">
+                                <h3>Generar Facturas</h3>
+                                <button class="modal-close">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="generation-options">
+                                    <div class="form-group">
+                                        <label for="generationPeriod">Período a Facturar</label>
+                                        <select id="generationPeriod">
+                                            <option value="current">Mes Actual</option>
+                                            <option value="next">Próximo Mes</option>
+                                            <option value="custom">Período Específico</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="generationDate">Fecha de Emisión</label>
+                                        <input type="date" id="generationDate">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dueDateDays">Días para Vencimiento</label>
+                                        <input type="number" id="dueDateDays" value="15" min="1">
+                                    </div>
+                                    <div class="form-group checkbox-group">
+                                        <label>
+                                            <input type="checkbox" id="includePrevious" checked>
+                                            Incluir saldos anteriores
+                                        </label>
+                                    </div>
+                                    <div class="form-group checkbox-group">
+                                        <label>
+                                            <input type="checkbox" id="sendNotifications" checked>
+                                            Enviar notificaciones por email
+                                        </label>
+                                    </div>
+                                </div>
+                
+                                <div class="preview-section">
+                                    <h4>Resumen de Facturación</h4>
+                                    <div class="preview-summary">
+                                        <div class="preview-item">
+                                            <span>Propiedades a facturar:</span>
+                                            <span id="propertiesCount">0</span>
+                                        </div>
+                                        <div class="preview-item">
+                                            <span>Total a facturar:</span>
+                                            <span id="totalToInvoice">$0</span>
+                                        </div>
+                                        <div class="preview-item">
+                                            <span>Administración:</span>
+                                            <span id="adminFee">$0</span>
+                                        </div>
+                                        <div class="preview-item">
+                                            <span>Otros conceptos:</span>
+                                            <span id="otherConcepts">$0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline modal-close">Cancelar</button>
+                                <button type="button" class="btn btn-primary" id="confirmGeneration">Generar Facturas</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="finanzas" class="module">
+                    <div class="module-header">
+                        <h2>Finanzas de la Copropiedad</h2>
+                        <div class="module-actions">
+                            <div class="dropdown">
+                                <button class="btn btn-outline dropdown-toggle" id="reportDropdown">
+                                    <i class="fas fa-chart-pie"></i> Generar Reporte
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item" data-report="monthly">Estado Mensual</a>
+                                    <a href="#" class="dropdown-item" data-report="annual">Estado Anual</a>
+                                    <a href="#" class="dropdown-item" data-report="cashflow">Flujo de Caja</a>
+                                    <a href="#" class="dropdown-item" data-report="budget">Presupuesto vs Real</a>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="comparePeriodsBtn">
+                                <i class="fas fa-not-equal"></i> Comparar Períodos
+                            </button>
+                        </div>
+                    </div>
+                
+                    <div class="finance-period-selector">
+                        <div class="period-tabs">
+                            <button class="period-tab active" data-period="month">Mes Actual</button>
+                            <button class="period-tab" data-period="quarter">Trimestre</button>
+                            <button class="period-tab" data-period="year">Año</button>
+                            <button class="period-tab" data-period="custom">Personalizado</button>
+                        </div>
+                        <div class="period-dates" id="customFinanceDates" style="display: none;">
+                            <input type="date" id="financeStartDate">
+                            <span>a</span>
+                            <input type="date" id="financeEndDate">
+                            <button class="btn btn-sm" id="applyFinanceDates">Aplicar</button>
+                        </div>
+                    </div>
+                
+                    <div class="finance-dashboard">
+                        <div class="finance-chart-container">
+                            <div class="chart-header">
+                                <h3>Ingresos vs Gastos</h3>
+                                <div class="chart-legend">
+                                    <span class="legend-item income"><i class="fas fa-square"></i> Ingresos</span>
+                                    <span class="legend-item expense"><i class="fas fa-square"></i> Gastos</span>
+                                </div>
+                            </div>
+                            <canvas id="financeChart" height="300"></canvas>
+                        </div>
+                
+                        <div class="finance-kpis">
+                            <div class="kpi-card">
+                                <div class="kpi-value" id="totalIncome">$0</div>
+                                <div class="kpi-label">Ingresos Totales</div>
+                                <div class="kpi-change" id="incomeChange"><i class="fas fa-caret-up"></i> 0%</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-value" id="totalExpenses">$0</div>
+                                <div class="kpi-label">Gastos Totales</div>
+                                <div class="kpi-change" id="expenseChange"><i class="fas fa-caret-up"></i> 0%</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-value" id="balance">$0</div>
+                                <div class="kpi-label">Balance</div>
+                                <div class="kpi-change" id="balanceChange"><i class="fas fa-caret-up"></i> 0%</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-value" id="collectionRate">0%</div>
+                                <div class="kpi-label">Tasa de Cobro</div>
+                                <div class="kpi-change" id="rateChange"><i class="fas fa-caret-up"></i> 0%</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="finance-details">
+                        <div class="detail-card">
+                            <div class="detail-header">
+                                <h3>Principales Ingresos</h3>
+                                <span class="detail-subtitle">Por concepto</span>
+                            </div>
+                            <div class="detail-content">
+                                <div class="income-categories" id="incomeCategories">
+                                    <!-- Datos cargados dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="detail-card">
+                            <div class="detail-header">
+                                <h3>Principales Gastos</h3>
+                                <span class="detail-subtitle">Por categoría</span>
+                            </div>
+                            <div class="detail-content">
+                                <div class="expense-categories" id="expenseCategories">
+                                    <!-- Datos cargados dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Modal para comparar períodos -->
+                    <div class="modal" id="compareModal">
+                        <div class="modal-content large">
+                            <div class="modal-header">
+                                <h3>Comparar Períodos Financieros</h3>
+                                <button class="modal-close">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="comparison-controls">
+                                    <div class="comparison-period">
+                                        <h4>Período 1</h4>
+                                        <select id="period1Type">
+                                            <option value="month">Mes</option>
+                                            <option value="quarter">Trimestre</option>
+                                            <option value="year">Año</option>
+                                        </select>
+                                        <select id="period1Month" class="month-select">
+                                            <option value="1">Enero</option>
+                                            <!-- Todos los meses -->
+                                        </select>
+                                        <select id="period1Year" class="year-select">
+                                            <!-- Años cargados dinámicamente -->
+                                        </select>
+                                    </div>
+                
+                                    <div class="comparison-period">
+                                        <h4>Período 2</h4>
+                                        <select id="period2Type">
+                                            <option value="month">Mes</option>
+                                            <option value="quarter">Trimestre</option>
+                                            <option value="year">Año</option>
+                                        </select>
+                                        <select id="period2Month" class="month-select">
+                                            <option value="1">Enero</option>
+                                            <!-- Todos los meses -->
+                                        </select>
+                                        <select id="period2Year" class="year-select">
+                                            <!-- Años cargados dinámicamente -->
+                                        </select>
+                                    </div>
+                                </div>
+                
+                                <div class="comparison-results">
+                                    <div class="comparison-chart-container">
+                                        <canvas id="comparisonChart" height="250"></canvas>
+                                    </div>
+                
+                                    <div class="comparison-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Concepto</th>
+                                                    <th id="period1Header">Periodo 1</th>
+                                                    <th id="period2Header">Periodo 2</th>
+                                                    <th>Diferencia</th>
+                                                    <th>% Cambio</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="comparisonTableBody">
+                                                <!-- Datos cargados dinámicamente -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline modal-close">Cerrar</button>
+                                <button type="button" class="btn btn-primary" id="exportComparison">Exportar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="gestion" class="module">
+                    <div class="module-header">
+                        <h2>Gestión de la Copropiedad</h2>
+                        <div class="module-actions">
+                            <button class="btn btn-primary" id="newMeetingBtn">
+                                <i class="fas fa-calendar-plus"></i> Nueva Reunión
+                            </button>
+                            <button class="btn btn-outline" id="newNoticeBtn">
+                                <i class="fas fa-bullhorn"></i> Nuevo Comunicado
+                            </button>
+                        </div>
+                    </div>
+                
+                    <div class="module-content">
+                        <div class="tabs">
+                            <div class="tab active" data-tab="meetings">Reuniones</div>
+                            <div class="tab" data-tab="notices">Comunicados</div>
+                            <div class="tab" data-tab="documents">Documentos</div>
+                        </div>
+                
+                        <div class="tab-content active" id="meetings-tab">
+                            <div class="meetings-list">
+                                <!-- Ejemplo de reunión -->
+                                <div class="meeting-card">
+                                    <div class="meeting-header">
+                                        <h3 class="meeting-title">Asamblea General Ordinaria</h3>
+                                        <span class="meeting-date">15 Mar 2023 - 18:00</span>
+                                    </div>
+                                    <p class="meeting-details">Se tratarán temas presupuestarios para el próximo trimestre y elección
+                                        del nuevo comité.</p>
+                                    <div class="meeting-actions">
+                                        <button class="action-btn"><i class="fas fa-eye"></i> Ver detalles</button>
+                                        <button class="action-btn"><i class="fas fa-download"></i> Descargar acta</button>
+                                    </div>
+                                </div>
+                
+                                <!-- Otra reunión -->
+                                <div class="meeting-card">
+                                    <div class="meeting-header">
+                                        <h3 class="meeting-title">Reunión Comité de Convivencia</h3>
+                                        <span class="meeting-date">28 Feb 2023 - 19:30</span>
+                                    </div>
+                                    <p class="meeting-details">Discusión sobre nuevas normas de convivencia y quejas presentadas por
+                                        residentes.</p>
+                                    <div class="meeting-actions">
+                                        <button class="action-btn"><i class="fas fa-eye"></i> Ver detalles</button>
+                                        <button class="action-btn"><i class="fas fa-download"></i> Descargar acta</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="tab-content" id="notices-tab">
+                            <div class="notices-list">
+                                <!-- Ejemplo de comunicado -->
+                                <div class="notice-card">
+                                    <div class="notice-header">
+                                        <h3 class="notice-title">Corte programado de agua</h3>
+                                        <span class="notice-date">10 Mar 2023</span>
+                                    </div>
+                                    <p class="notice-content">Se informa que el próximo miércoles 15 de marzo habrá corte de agua desde
+                                        las 8:00 AM hasta las 4:00 PM por mantenimiento de la red hidráulica.</p>
+                                    <div class="notice-actions">
+                                        <button class="action-btn"><i class="fas fa-share-alt"></i> Compartir</button>
+                                    </div>
+                                </div>
+                
+                                <!-- Otro comunicado -->
+                                <div class="notice-card">
+                                    <div class="notice-header">
+                                        <h3 class="notice-title">Nuevo horario de piscina</h3>
+                                        <span class="notice-date">5 Mar 2023</span>
+                                    </div>
+                                    <p class="notice-content">A partir del 1 de abril, el horario de la piscina será de 8:00 AM a 8:00
+                                        PM. Se prohíbe el uso después de este horario.</p>
+                                    <div class="notice-actions">
+                                        <button class="action-btn"><i class="fas fa-share-alt"></i> Compartir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="tab-content" id="documents-tab">
+                            <div class="empty-state">
+                                <i class="fas fa-folder-open"></i>
+                                <h3>No hay documentos disponibles</h3>
+                                <p>Próximamente podrás acceder a los documentos de tu copropiedad aquí.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Modal para nueva reunión -->
+                <div class="modal" id="meetingModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Nueva Reunión</h3>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="meetingForm">
+                                <div class="form-group">
+                                    <label for="meetingTitle">Título de la reunión</label>
+                                    <input type="text" id="meetingTitle" class="form-control" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="meetingDate">Fecha y hora</label>
+                                    <input type="datetime-local" id="meetingDate" class="form-control" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="meetingLocation">Lugar</label>
+                                    <input type="text" id="meetingLocation" class="form-control" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="meetingAgenda">Orden del día</label>
+                                    <textarea id="meetingAgenda" class="form-control" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline" id="cancelMeetingBtn">Cancelar</button>
+                            <button class="btn btn-primary" id="saveMeetingBtn">Programar Reunión</button>
                         </div>
                     </div>
                 </div>
-                        
-        </Section>
-    </main>
+                
+                <!-- Modal para nuevo comunicado -->
+                <div class="modal" id="noticeModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Nuevo Comunicado</h3>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="noticeForm">
+                                <div class="form-group">
+                                    <label for="noticeTitle">Título del comunicado</label>
+                                    <input type="text" id="noticeTitle" class="form-control" required>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="noticeContent">Contenido</label>
+                                    <textarea id="noticeContent" class="form-control" required></textarea>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="noticePriority">Prioridad</label>
+                                    <select id="noticePriority" class="form-control">
+                                        <option value="normal">Normal</option>
+                                        <option value="important">Importante</option>
+                                        <option value="urgent">Urgente</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline" id="cancelNoticeBtn">Cancelar</button>
+                            <button class="btn btn-primary" id="saveNoticeBtn">Publicar Comunicado</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cada uno con estructura similar pero contenido específico -->
+
+            </div>
+        </main>
+    </div>
+
+    <script src="/src/js/admin.js"></script>
 </body>
+
 </html>

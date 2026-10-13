@@ -1,0 +1,671 @@
+<!DOCTYPE html><!--Se utiliza la etiqueta DOCTYPE  para informa al navegador qué versión de HTML (o XML) se usó para escribir el documento.-->
+<html lang="es" data-theme="light"><!--Establece el idioma del documento usando el atributo lang -->
+<head><!--Contiene información general sobre el documento, como el título, los estilos y los metadatos.-->
+    <meta charset="UTF-8"><!--Establece la codificación de caracteres para el documento.-->
+    <meta name="Quorum360" content="Quorum360 - Software de Administración de Propiedad Horizontal Eficiente y Seguro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Establece la escala de la página y la anchura de la ventana gráfica. permitiendo ser responsive y escalable el codigo-->
+    <meta name="description" content="Software especializado en gestión de propiedad horizontal en Colombia. Cumplimiento Ley 675 de 2001. Administración de condominios, cobros y asambleas virtuales."><!--Establece una descripción de la página. permite mejorar la busqueda y da posicionamiento SEO-->
+    <meta name="robots" content="index, follow"><!--Permite a los motores de búsqueda indexar la página y seguir los enlaces.-->
+    <meta name="keywords" content="propiedad horizontal Colombia, administración de condominios, ley 675, software PH, gestión copropiedades, asambleas virtuales, cobros administrativos, Quorum360"><!--Establece palabras clave para la página. permite mejorar la busqueda y da posicionamiento SEO-->
+    <meta name="Aley Cabrera D" content="Quorum360 Team"><!--Establece el autor de la página.-->
+    <meta property="og:title" content="Quorum360 - Software de Propiedad Horizontal">
+    <meta property="og:description" content="Optimiza la gestión de condominios con nuestro software especializado">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:image" content="/src/assets/image/Q360.png">
+    <meta property="og:url" content="https://quorum360.com">
+    <meta property="og:site_name" content="Quorum360">
+    <meta property="og:title" content="Quorum360 - Software Especializado en Propiedad Horizontal">
+    <meta property="og:description"
+        content="Solución integral para la administración de propiedad horizontal en Colombia. Automatiza procesos y cumple con la Ley 675.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://quorum360.com/">
+    <meta property="twitter:title" content="Quorum360 - Software Especializado en Propiedad Horizontal">
+    <meta property="twitter:description"
+        content="Solución integral para la administración de propiedad horizontal en Colombia. Automatiza procesos y cumple con la Ley 675.">
+    <meta property="twitter:image" content="https://quorum360.com/images/og-image.jpg">
+    <meta property="twitter:site" content="@Quorum360">
+    <meta property="twitter:creator" content="@Quorum360">
+
+    <link rel="canonical" href="https://quorum360.com/">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Establece el modo de compatibilidad del navegador.-->
+    <link rel="icon" href="/src/assets/iconos/quorum360.ico"  type="image/x-icon"><!--Establece el icono de la página.-->
+    <link rel="stylesheet" type="text/css" href="/src/styles/style_index.css"><!--Establece la hoja de estilos de la página.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--Establece un enlace de navegación.-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Quorum360</title><!--Establece el título de la página.-->
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Quorum360",
+            "description": "Software de gestión administrativa para propiedad horizontal en Colombia",
+            "operatingSystem": "Web",
+            "applicationCategory": "BusinessApplication",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+            }
+    </script>
+</head>
+<body class="active"><!--Contiene todo el contenido visible de la página.-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" aria-label="Quorum360 - Inicio">
+                <img src="/src/assets/image/Q360.png" alt="Quorum360" loading="lazy" class="logo-img">
+            </a>
+        </div>
+    
+        <nav class="header-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="#about-section" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="#" class="nav-link">Comunidad</a></li>
+                <li><a href="#" class="nav-link">Servicios</a></li>
+                <li><a href="#" class="nav-link">Soporte</a></li>
+                <li><a href="#" class="nav-link">Contáctanos</a></li>
+            </ul>
+        </nav>
+    
+        <div class="header-actions">
+            <div class="toggle-container">
+                <div class="toggle-switch" id="darkModeSwitch">
+                    <i class='bx bxs-moon'></i>
+                    <i class='bx bxs-sun'></i>
+                    <div class="toggle-button"></div>
+                </div>
+            </div>
+    
+            <div class="auth-buttons">
+                <a href="inicio_secion.html" class="auth-button login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Iniciar Sesión</span>
+                </a>
+                <a href="/src/pages/registro_usuario.html" class="auth-button signup">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Registrarse</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main><!--Contiene el contenido principal de la página.-->
+        <section class="hero">
+            <div class="hero-logo">
+                <img src="/src/assets/image/q360_beige.png" alt="Quorum360" class="hero-logo-img" id="animated-logo">
+            </div>
+        </section>
+
+        <section class="gestion" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 id="hero-heading" class="hero__title">Gestión Inteligente para Propiedad Horizontal</h1>
+                    <p class="hero__text">Cumplimiento de la Ley 675 de 2001 y optimización de procesos administrativos para
+                        copropiedades en Colombia</p>
+                    <div class="hero__actions">
+                        <a href="/demo" class="btn btn--primary btn--large">Solicitar Demo</a>
+                        <a href="/precios" class="btn btn--outline btn--large">Ver Planes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="/src/assets/image/dashboard.jpg"
+                    alt="Interfaz del software Quorum360 mostrando dashboard de administración" width="600" height="400"
+                    loading="eager">
+            </div>
+        </section>
+
+        <section class="features" aria-labelledby="features-heading">
+            <div class="container">
+                <h2 id="features-heading" class="section-title">Funcionalidades Clave</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <img src="/assets/icons/cobros.svg" alt="" aria-hidden="true" width="48" height="48">
+                        </div>
+                        <h3 class="feature-card__title">Gestión de Cobros</h3>
+                        <p class="feature-card__desc">Automatización de cobros recurrentes y generación de estados de cuenta.
+                        </p>
+                    </article>
+        
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <img src="/assets/icons/asambleas.svg" alt="" aria-hidden="true" width="48" height="48">
+                        </div>
+                        <h3 class="feature-card__title">Asambleas Virtuales</h3>
+                        <p class="feature-card__desc">Realice asambleas con validez legal y participación remota.</p>
+                    </article>
+        
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <img src="/assets/icons/contabilidad.svg" alt="" aria-hidden="true" width="48" height="48">
+                        </div>
+                        <h3 class="feature-card__title">Contabilidad Integrada</h3>
+                        <p class="feature-card__desc">Reportes financieros automáticos y conciliación bancaria.</p>
+                    </article>
+        
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <img src="/assets/icons/documentos.svg" alt="" aria-hidden="true" width="48" height="48">
+                        </div>
+                        <h3 class="feature-card__title">Gestión Documental</h3>
+                        <p class="feature-card__desc">Archivo digital de actas, reglamentos y comunicaciones.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery" aria-label="Galería de imágenes de nuestros proyectos">
+            <div class="container">
+                <h2 class="section-title">Nuestros Espacios</h2>
+                <div class="gallery-container">
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image1.png" alt="Edificio moderno de conjunto residencial"
+                                loading="lazy">
+                            <div class="image-overlay">
+                                <p>Conjunto Residencial Las Acacias</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image2.png" alt="Áreas comunes del conjunto residencial" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Áreas Sociales Premium</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image3.png" alt="Vista aérea del conjunto residencial" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Vista Panorámica</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image4.png" alt="Piscina y zona de recreación" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Zona Recreativa</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image5.png" alt="Jardines y áreas verdes" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Jardines y Naturaleza</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image1.png" alt="Edificio moderno de conjunto residencial" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Conjunto Residencial Las Acacias</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image2.png" alt="Áreas comunes del conjunto residencial" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Áreas Sociales Premium</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image3.png" alt="Vista aérea del conjunto residencial" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Vista Panorámica</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image4.png" alt="Piscina y zona de recreación" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Zona Recreativa</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-slider">
+                        <div class="gallery-image">
+                            <img src="/src/assets/image/image5.png" alt="Jardines y áreas verdes" loading="lazy">
+                            <div class="image-overlay">
+                                <p>Jardines y Naturaleza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about-section">
+            <div class="container-about-section">
+                <div class="about-content">
+                    <h2 class="section-title">Quiénes Somos</h2>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p class="highlight">Quorum360 es la solución tecnológica líder en gestión de copropiedades y
+                                propiedad horizontal.</p>
+                            <p>Nuestra plataforma integrada ofrece herramientas innovadoras para administradores, residentes y
+                                proveedores, simplificando todos los procesos de gestión comunitaria.</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> Automatización de procesos administrativos</li>
+                                <li><i class="fas fa-check-circle"></i> Comunicación centralizada</li>
+                                <li><i class="fas fa-check-circle"></i> Transparencia en la gestión</li>
+                                <li><i class="fas fa-check-circle"></i> Soporte técnico especializado</li>
+                            </ul>
+                            <a href="/src/pages/quienesomos.html" class="learn-more">Conoce más sobre nosotros</a>
+                        </div>
+
+                        <div class="video">
+                            <div class="video-container">
+                                <!-- Reemplaza con tu ID de video de YouTube -->
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id?enablejsapi=1"
+                                    title="Video de presentación de Quorum360" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                    id="quorum-video"></iframe>
+                            
+                                <div class="play-button" id="play-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Controlador del botón de reproducción
+            document.addEventListener('DOMContentLoaded', function () {
+                const video = document.getElementById('quorum-video');
+                const playButton = document.getElementById('play-button');
+                let player;
+
+                // Mostrar/ocultar botón de reproducción
+                video.addEventListener('mouseenter', () => {
+                    playButton.style.opacity = '1';
+                });
+
+                video.addEventListener('mouseleave', () => {
+                    playButton.style.opacity = '0';
+                });
+
+                // Control de reproducción
+                playButton.addEventListener('click', () => {
+                    playButton.style.display = 'none';
+                    video.src += "&autoplay=1";
+                });
+
+                // API de YouTube (opcional para más control)
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('quorum-video', {
+                        events: {
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+
+                function onPlayerStateChange(event) {
+                    if (event.data === YT.PlayerState.PLAYING) {
+                        playButton.style.display = 'none';
+                    } else if (event.data === YT.PlayerState.PAUSED) {
+                        playButton.style.display = 'flex';
+                    }
+                }
+            });
+        </script>
+
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="testimonials-heading" class="section-title">Lo que dicen nuestros clientes</h2>
+                    <p class="section-subtitle">Conoce nuestros alcances</p>
+                </div>
+        
+                <div class="testimonials-slider">
+                    <div class="testimonials-track">
+                        <!-- Testimonio 1 -->
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating" aria-label="Calificación: 5 estrellas">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <p class="testimonial-text" itemprop="reviewBody">"Quorum360 ha transformado la gestión de
+                                    nuestra copropiedad. Ahora todo es más transparente y eficiente."</p>
+                                <div class="testimonial-author">
+                                    <img src="/src/assets/image/test1.png" alt="Foto de Juan Martínez" class="author-photo"
+                                        width="60" height="60" loading="lazy" itemprop="image">
+                                    <div class="author-info">
+                                        <h3 class="author-name" itemprop="author">Juan Martínez</h3>
+                                        <p class="author-role" itemprop="description">Administrador de PH</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote"></div>
+                        </article>
+        
+                        <!-- Testimonio 2 -->
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating" aria-label="Calificación: 5 estrellas">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <p class="testimonial-text" itemprop="reviewBody">"Para la contabilidad de las copropiedades,
+                                    Quorum360 es la herramienta ideal. Me encanta cómo simplifica la generación de estados
+                                    financieros."</p>
+                                <div class="testimonial-author">
+                                    <img src="/src/assets/image/test6.png" alt="Foto de Laura González" class="author-photo"
+                                        width="60" height="60" loading="lazy" itemprop="image">
+                                    <div class="author-info">
+                                        <h3 class="author-name" itemprop="author">Laura González</h3>
+                                        <p class="author-role" itemprop="description">Contadora Pública</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote"></div>
+                        </article>
+
+                        <!-- Testimonio 3 -->
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating" aria-label="Calificación: 5 estrellas">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <p class="testimonial-text" itemprop="reviewBody">"Como ingeniero de sistemas, puedo decir que Quorum360 tiene una infraestructura sólida y bien diseñada. Es confiable,
+                                segura y fácil de integrar con otros sistemas."</p>
+                                <div class="testimonial-author">
+                                    <img src="/src/assets/image/test3.png" alt="Foto de Laura González" class="author-photo" width="60"
+                                        height="60" loading="lazy" itemprop="image">
+                                    <div class="author-info">
+                                        <h3 class="author-name" itemprop="author">Andres Perez</h3>
+                                        <p class="author-role" itemprop="description">Ingeniero de Sistemas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote"></div>
+                        </article>
+
+                        <!-- Testimonio 4 -->
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating" aria-label="Calificación: 5 estrellas">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <p class="testimonial-text" itemprop="reviewBody">"Quorum360 me ha permitido estar más involucrada en la gestión de mi edificio. Antes era difícil estar al tanto de las
+                                reuniones y decisiones importantes."</p>
+                                <div class="testimonial-author">
+                                    <img src="/src/assets/image/test4.png" alt="Foto de Laura González" class="author-photo" width="60"
+                                        height="60" loading="lazy" itemprop="image">
+                                    <div class="author-info">
+                                        <h3 class="author-name" itemprop="author">María Fernanda Ruiz</h3>
+                                        <p class="author-role" itemprop="description">Propietaria en Copropiedad</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote"></div>
+                        </article>
+
+                        <!-- Testimonio 5 -->
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating" aria-label="Calificación: 5 estrellas">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <p class="testimonial-text" itemprop="reviewBody">"Desde el punto de vista legal, Quorum360 ha sido una herramienta invaluable. Facilita la gestión documental y
+                                permite un registro claro de las decisiones en las asambleas."</p>
+                                <div class="testimonial-author">
+                                    <img src="/src/assets/image/test5.png" alt="Foto de Laura González" class="author-photo" width="60"
+                                        height="60" loading="lazy" itemprop="image">
+                                    <div class="author-info">
+                                        <h3 class="author-name" itemprop="author">Carlos Gómez</h3>
+                                        <p class="author-role" itemprop="description">Abogado</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote"></div>
+                        </article>
+
+                        <!-- Testimonio 6 -->
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating" aria-label="Calificación: 5 estrellas">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <p class="testimonial-text" itemprop="reviewBody">"Quorum360 ha sido clave en varios proyectos que gestiono. Nos permite coordinar mejor con las administraciones de las
+                                propiedades, y el manejo de la información es impecable."</p>
+                                <div class="testimonial-author">
+                                    <img src="/src/assets/image/test2.png" alt="Foto de Laura González" class="author-photo" width="60"
+                                        height="60" loading="lazy" itemprop="image">
+                                    <div class="author-info">
+                                        <h3 class="author-name" itemprop="author">Paula López</h3>
+                                        <p class="author-role" itemprop="description">Gerente de Proyectos Inmobiliarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote"></div>
+                        </article>
+        
+                        <!-- Más testimonios aquí -->
+                    </div>
+        
+                    <!-- Controles del slider -->
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Testimonio anterior">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="#1F3B4D" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="slider-dots"></div>
+                        <button class="slider-next" aria-label="Siguiente testimonio">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="#1F3B4D" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const track = document.querySelector('.testimonials-track');
+                const cards = document.querySelectorAll('.testimonial-card');
+                const prevBtn = document.querySelector('.slider-prev');
+                const nextBtn = document.querySelector('.slider-next');
+                const dotsContainer = document.querySelector('.slider-dots');
+
+                let currentIndex = 0;
+                const cardWidth = cards[0].offsetWidth + 32; // Ancho + gap (32px = 2rem)
+
+                // Crear dots de navegación
+                cards.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('slider-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = document.querySelectorAll('.slider-dot');
+
+                // Función para mover el slider
+                function goToSlide(index) {
+                    // Ajustar el índice si está fuera de rango
+                    if (index >= cards.length) {
+                        index = 0;
+                    } else if (index < 0) {
+                        index = cards.length - 1;
+                    }
+
+                    currentIndex = index;
+                    const offset = -currentIndex * cardWidth;
+                    track.style.transform = `translateX(${offset}px)`;
+
+                    // Actualizar dots activos
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === currentIndex);
+                    });
+                }
+
+                // Event listeners para los botones
+                prevBtn.addEventListener('click', () => {
+                    goToSlide(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    goToSlide(currentIndex + 1);
+                });
+
+                // Auto slide (opcional)
+                let autoSlide = setInterval(() => {
+                    goToSlide(currentIndex + 1);
+                }, 5000);
+
+                // Pausar auto slide al interactuar
+                track.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlide);
+                });
+
+                track.addEventListener('mouseleave', () => {
+                    autoSlide = setInterval(() => {
+                        goToSlide(currentIndex + 1);
+                    }, 5000);
+                });
+
+                // Responsive: Recalcular en redimensionamiento
+                window.addEventListener('resize', () => {
+                    const newCardWidth = cards[0].offsetWidth + 32;
+                    if (newCardWidth !== cardWidth) {
+                        cardWidth = newCardWidth;
+                        goToSlide(currentIndex);
+                    }
+                });
+            });
+        </script>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <section class="newsletter">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Suscríbete a nuestro Newsletter</h2>
+                    <p class="newsletter-description">Mantente al día con nuestras noticias, artículos y actualizaciones.
+                    </p>
+                </div>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Correo electrónico" class="subscribe-input" required>
+                    <button type="submit" class="subscribe-button">Suscribirse</button>
+                </form>
+            </section>
+    
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="/src/assets/image/Q360.png" alt="Quorum360 Logo" class="logo-img">
+                    <p class="logo-slogan">Innovación en gestión de copropiedades</p>
+                </div>
+    
+                <nav class="footer-nav">
+                    <h3 class="nav-title">Casos de Uso</h3>
+                    <ul class="nav-list">
+                        <li><a href="/">Ley 675</a></li>
+                        <li><a href="/">Código de Convivencia</a></li>
+                        <li><a href="/">Propiedad Horizontal</a></li>
+                        <li><a href="/">Medio Ambiente</a></li>
+                        <li><a href="/">Normas de convivencia</a></li>
+                    </ul>
+                </nav>
+    
+                <nav class="footer-nav">
+                    <h3 class="nav-title">Comunidad</h3>
+                    <ul class="nav-list">
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Encuestas</a></li>
+                        <li><a href="/">Foro</a></li>
+                        <li><a href="/">Soporte</a></li>
+                    </ul>
+                </nav>
+    
+                <nav class="footer-nav">
+                    <h3 class="nav-title">Servicios</h3>
+                    <ul class="nav-list">
+                        <li><a href="/">Contratistas</a></li>
+                        <li><a href="/">Consultoría</a></li>
+                        <li><a href="/">Cotiza con nosotros</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="footer-divider"></div>
+    
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="/" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="/" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+    
+                <div class="copyright">
+                    © Quorum360, Inc. <span id="current-year"></span>. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="../js/newDate.js"></script>
+<script src="../js/dark.js"></script>
+<script src="../js/logo.js"></script>
+<script src="../js/animaciones.js"></script>
+</html>

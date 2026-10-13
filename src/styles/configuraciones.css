@@ -1,0 +1,599 @@
+:root {
+    --color-primary: #1f3b4d;
+    --color-secondary: #17bebb;
+    --color-accent: #f8a51b;
+    --color-light: #ffffff;
+    --color-dark: #0d1f2b;
+    --color-gray: #e0e5e9;
+    --color-text: #5a6f7b;
+    --color-success: #2ecc71;
+    --color-warning: #f39c12;
+    --color-danger: #e74c3c;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--color-dark);
+}
+
+.configuracion-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 1.5rem 0;
+    position: fixed;
+    height: 100%;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.logo-config {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.logo-config img {
+    max-width: 80%;
+    height: auto;
+}
+
+.config-menu ul {
+    list-style: none;
+}
+
+.config-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.config-menu a {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    color: var(--color-light);
+    text-decoration: none;
+    transition: var(--transition);
+    opacity: 0.8;
+}
+
+.config-menu a i {
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.config-menu a:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.config-menu .active a {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 3px solid var(--color-secondary);
+}
+
+/* Main Content */
+.config-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+    background-color: var(--color-light);
+    min-height: 100vh;
+}
+
+.config-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.config-header h1 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.config-header h1 i {
+    margin-right: 0.8rem;
+    color: var(--color-secondary);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Config Sections */
+.config-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.config-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.config-form {
+    background-color: var(--color-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+}
+
+.config-form h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.config-form h2 i {
+    margin-right: 0.8rem;
+    color: var(--color-secondary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(23, 190, 187, 0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-save {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-save i {
+    margin-right: 0.5rem;
+}
+
+.btn-save:hover {
+    background-color: #15a8a6;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Modules Section */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.module-card {
+    position: relative;
+}
+
+.module-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.module-card label {
+    display: block;
+    padding: 1.5rem;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.module-card input[type="checkbox"]:checked+label {
+    border-color: var(--color-secondary);
+    background-color: rgba(23, 190, 187, 0.05);
+    box-shadow: 0 0 0 1px var(--color-secondary);
+}
+
+.module-card input[type="checkbox"]:focus+label {
+    box-shadow: 0 0 0 3px rgba(23, 190, 187, 0.2);
+}
+
+.module-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(23, 190, 187, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+.module-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.module-card p {
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+/* Users Management */
+.users-management {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+.users-list-container {
+    background-color: var(--color-light);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+}
+
+.users-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.users-list-header h3 {
+    color: var(--color-primary);
+}
+
+.btn-add {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-add i {
+    margin-right: 0.5rem;
+}
+
+.btn-add:hover {
+    background-color: #15a8a6;
+}
+
+.users-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-gray);
+    transition: var(--transition);
+}
+
+.user-item:hover {
+    background-color: rgba(23, 190, 187, 0.05);
+}
+
+.user-avatar-sm {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.user-info-sm {
+    flex: 1;
+}
+
+.user-name {
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.user-email {
+    font-size: 0.8rem;
+    color: var(--color-text);
+}
+
+.user-role {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background-color: var(--color-gray);
+    color: var(--color-primary);
+}
+
+.user-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-actions button {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.user-actions button:hover {
+    color: var(--color-secondary);
+}
+
+.user-form-container {
+    background-color: var(--color-light);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+}
+
+#user-form-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.btn-cancel {
+    background-color: var(--color-gray);
+    color: var(--color-text);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-right: 1rem;
+}
+
+.btn-cancel:hover {
+    background-color: #d0d6dd;
+}
+
+/* Security Section */
+.password-strength {
+    margin: 1.5rem 0;
+}
+
+.strength-meter {
+    height: 5px;
+    background-color: var(--color-gray);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--color-danger);
+    transition: var(--transition);
+}
+
+.strength-text {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+#strength-value {
+    font-weight: 500;
+}
+
+.security-options {
+    margin: 2rem 0;
+}
+
+.security-options h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group input {
+    margin-right: 0.8rem;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .users-management {
+        grid-template-columns: 1fr;
+    }
+
+    .user-form-container {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 70px;
+        overflow: hidden;
+    }
+
+    .logo-config img {
+        max-width: 50px;
+    }
+
+    .config-menu a span {
+        display: none;
+    }
+
+    .config-menu a i {
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+
+    .config-content {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .config-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .config-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 1rem;
+    }
+
+    .config-menu ul {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .config-menu li {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    }
+
+    .config-menu a {
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+    }
+
+    .config-menu .active a {
+        border-left: none;
+        border-bottom: 3px solid var(--color-secondary);
+    }
+
+    .config-content {
+        margin-left: 0;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+    }
+}

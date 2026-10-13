@@ -1,269 +1,314 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 :root {
-    /*Establece variables de CSS personalizadas que contienen valores específicos para reutilizar en todo el documento.*/
-    --azul-marinno: #1F3B4D;
-    --cian: #17BEBB;
-    --gris-claro: #F0F0F0;
-    --blanco-puro: #FFFFFF;
-    --gris-oscuro: #515151;
-    --font-family: 'Roboto', sans-serif;
-    --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
+    --color-primary: #1f3b4d;
+    --color-secondary: #17bebb;
+    --color-accent: #f8a51b;
+    --color-light: #ffffff;
+    --color-dark: #0d1f2b;
+    --color-gray: #e0e5e9;
+    --color-text: #5a6f7b;
+    --color-danger: #e74c3c;
+    --color-success: #2ecc71;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
 }
 
-/*Glogal*/
 * {
-    /*Establece un estilo para todos los elementos HTML.*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    /*Establece un estilo para el cuerpo del documento.*/
-    font-family: var(--font-family);
-    font-size: var(--md);
-    background-color: var(--gris-claro);
-    color: var(--azul-marinno);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f7fa;
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+.login-container {
     display: flex;
+    min-height: 100vh;
+}
+
+.login-hero {
+    flex: 1;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh;
-    margin-top: 10px;
+    padding: 2rem;
+    color: var(--color-light);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-img {
-    /*Establece un estilo para las imágenes.*/
-    max-width: 100%;
-    height: auto;
+.login-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('/src/assets/image/Q360.png') center/contain no-repeat;
+    opacity: 0.05;
+    animation: rotate 30s linear infinite;
 }
 
-a {
-    /*Establece un estilo para los enlaces.*/
-    text-decoration: none;
-    color: var(--azul-marinno);
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-/*Header*/
-header {
-    /*Establece un estilo para el encabezado del documento.*/
-    background-color: var(--azul-marinno);
-    color: var(--blanco-puro);
-    padding: 0.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    /*Establece un estilo para el encabezado del documento cuando se desplaza fijandolo al hacer scroll.*/
-    top: 0;
+.login-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+}
+
+.login-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.login-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.login-form-container {
     width: 100%;
-    z-index: 1000;
-    box-shadow: var(--gris-oscuro) 0px 2px 10px;
-}
-
-header img {
-    /*Establece un estilo para las imágenes dentro del encabezado.*/
-    max-height: 60px;
-    margin-left: 25px;
-}
-
-header nav {
-    /*Establece un estilo para la navegación dentro del encabezado.*/
-    margin-right: 25px;
-
-}
-
-.header_nav .header_list {
-    /*Establece un estilo para las listas dentro de la navegación del encabezado.*/
+    max-width: 500px;
     display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-nav a {
-    /*Establece un estilo para los elementos de la lista de navegación.*/
-    color: var(--blanco-puro);
-    padding: 10px;
-    font-size: var(--sm);
-}
-
-header .item:hover {
-    /*Establece un estilo para los elementos de la lista de navegación cuando el cursor está sobre ellos.*/
-    background-color: var(--cian);
-    border-radius: 5px;
-    box-shadow: var(--gris-claro) 2px 2px 4px;
-}
-
-.header_auth {
-    /*Establece un estilo para la autenticación dentro del encabezado.*/
-    display: flex;
-    margin-right: 20px;
-    gap: 1rem;
-}
-
-.header_auth a {
-    /*Establece un estilo para la autenticación dentro del encabezado.*/
-    color: var(--blanco-puro);
-    padding: 5px 10px;
-    margin-left: 10px;
-    display: flex;
-    gap: 1rem;
-}
-
-.header_auth .sign_in {
-    /*Establece un estilo para la autenticación dentro del encabezado.*/
-    background-color: var(--cian);
-    border-radius: 5px;
-}
-
-.header_auth .sign_in:hover {
-    /*Establece un estilo para la autenticación dentro del encabezado cuando el cursor está sobre ellos.*/
-    background-color: var(--gris-oscuro);
-    border-radius: 5px;
-    box-shadow: var(--gris-claro) 2px 2px 4px;
-}
-
-.header_auth .registre {
-    /*Establece un estilo para la autenticación dentro del encabezado.*/
-    background-color: var(--blanco-puro);
-    color: var(--azul-marinno);
-    border-radius: 5px;
-}
-
-.header_auth .registre:hover {
-    /*Establece un estilo para la autenticación dentro del encabezado cuando el cursor está sobre ellos.*/
-    background-color: var(--gris-oscuro);
-    border-radius: 5px;
-    color: var(--blanco-puro);
-    box-shadow: var(--gris-claro) 2px 2px 4px;
-}
-
-/*Main*/
-main {
-    /*Establece un estilo para el contenido principal del documento.*/
-    margin-top: 100px;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 3rem 2rem;
+    background-color: var(--color-light);
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-logo img {
+    height: 60px;
+    /* filter: brightness(0) invert(28%) sepia(15%) saturate(1206%) hue-rotate(142deg) brightness(93%) contrast(90%); */
+}
+
+.login-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.login-header h2 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: var(--color-text);
+}
+
+.login-form {
     width: 100%;
 }
 
-.login {
-    /*Establece un estilo para el formulario de inicio de sesión.*/
-    width: 10%;
-    height: 50vh;
-    display: grid;
-    place-items: center;
-}
-
-.form-container {
-    /*Establece un estilo para el contenedor del formulario.*/
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    width: 350px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--blanco-puro);
-    flex-direction: column;
-    gap: 0.1rem;
-}
-
-.form-container .container {
-    /*Establece un estilo para el contenedor del formulario.*/
-    display: flex;
-    flex-direction: column;
-}
-
-h2 {
-    /*Establece un estilo para el título del logo.*/
-    font-size: var(--lg);
-    color: var(--azul-marinno);
+.form-group {
     margin-bottom: 1.5rem;
-    justify-self: center;
 }
 
-.form {
-    /*Establece un estilo para el formulario.*/
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 500;
 }
 
-.form a {
-    color: var(--azul-marinno);
-    font-size: var(--sm);
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(23, 190, 187, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
     text-align: center;
     text-decoration: none;
-    margin-bottom: 54px;
+    border: none;
 }
 
-label {
-    /*Establece un estilo para las etiquetas del formulario.*/
-    font-family: var(--azul-marinno);
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #15a8a6;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(31, 59, 77, 0.05);
+}
+
+.social-login {
+    margin: 2rem 0;
+}
+
+.social-login p {
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: var(--color-gray);
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    border-radius: 4px;
+    color: var(--color-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.btn-google {
+    background-color: #db4437;
+}
+
+.btn-microsoft {
+    background-color: #0078d4;
+}
+
+.btn-apple {
+    background-color: #000000;
+}
+
+.btn-facebook {
+    background-color: #1877f2;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-text);
+}
+
+.login-footer a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
     font-size: 0.9rem;
-    margin-bottom: 1px;
-    display: block;
 }
 
-.input {
-    /*Establece un estilo para los campos de entrada del formulario.*/
-    background-color: var(--gris-claro);
-    height: 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: var(--md);
-    padding: 8px;
-    margin-bottom: 16px;
+.alert-danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--color-danger);
+    border-left: 4px solid var(--color-danger);
 }
 
-.primary-button {
-    background-color: var(--cian);
-    border-radius: 8px;
-    border: none;
-    color: var(--blanco-puro);
-    width: 100%;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 35px;
-    cursor: pointer;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+/* Responsive */
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-hero {
+        padding: 3rem 2rem;
+    }
+
+    .login-form-container {
+        max-width: 100%;
+        padding: 2rem;
+    }
 }
 
-.secondary-button {
-    background-color: var(--gris-claro);
-    border-radius: 8px;
-    border: 1px solid var(--gris-oscuro);
-    color: var(--azul-marinno);
-    width: 100%;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 35px;
-    cursor: pointer;
-    padding: 8px;
-    transition: background-color 0.3s ease;
-}
+@media (max-width: 576px) {
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
 
-.login-button {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    .login-hero h1 {
+        font-size: 2rem;
+    }
 }
-
-input:focus {
-    /*Establece un estilo para los campos de entrada del formulario cuando están enfocados.*/
-    border-color: 1px solid var(--cian);
-}
-
-.login-button:hover {
-    background-color: var(--gris-oscuro);
-}
-
-.secondary-button:hover {
-    background-color: var(--gris-oscuro);
-    color: var(--blanco-puro);
-}
-

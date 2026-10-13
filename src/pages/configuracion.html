@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--Se utiliza la etiqueta DOCTYPE  para informa al navegador qué versión de HTML (o XML) se usó para escribir el documento.-->
+<html lang="es" data-theme="light"><!--Establece el idioma del documento usando el atributo lang -->
+
+<head><!--Contiene información general sobre el documento, como el título, los estilos y los metadatos.-->
+    <meta charset="UTF-8"><!--Establece la codificación de caracteres para el documento.-->
+    <meta name="Quorum360" content="Quorum360 - Software de Administración de Propiedad Horizontal Eficiente y Seguro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Establece la escala de la página y la anchura de la ventana gráfica. permitiendo ser responsive y escalable el codigo-->
+    <meta name="description"
+        content="Software especializado en gestión de propiedad horizontal en Colombia. Cumplimiento Ley 675 de 2001. Administración de condominios, cobros y asambleas virtuales.">
+    <!--Establece una descripción de la página. permite mejorar la busqueda y da posicionamiento SEO-->
+    <meta name="robots" content="index, follow">
+    <!--Permite a los motores de búsqueda indexar la página y seguir los enlaces.-->
+    <meta name="keywords"
+        content="propiedad horizontal Colombia, administración de condominios, ley 675, software PH, gestión copropiedades, asambleas virtuales, cobros administrativos, Quorum360">
+    <!--Establece palabras clave para la página. permite mejorar la busqueda y da posicionamiento SEO-->
+    <meta name="Aley Cabrera D" content="Quorum360 Team"><!--Establece el autor de la página.-->
+    <meta property="og:title" content="Quorum360 - Software de Propiedad Horizontal">
+    <meta property="og:description" content="Optimiza la gestión de condominios con nuestro software especializado">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:image" content="/src/assets/image/Q360.png">
+    <meta property="og:url" content="https://quorum360.com">
+    <meta property="og:site_name" content="Quorum360">
+    <meta property="og:title" content="Quorum360 - Software Especializado en Propiedad Horizontal">
+    <meta property="og:description"
+        content="Solución integral para la administración de propiedad horizontal en Colombia. Automatiza procesos y cumple con la Ley 675.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://quorum360.com/">
+    <meta property="twitter:title" content="Quorum360 - Software Especializado en Propiedad Horizontal">
+    <meta property="twitter:description"
+        content="Solución integral para la administración de propiedad horizontal en Colombia. Automatiza procesos y cumple con la Ley 675.">
+    <meta property="twitter:image" content="https://quorum360.com/images/og-image.jpg">
+    <meta property="twitter:site" content="@Quorum360">
+    <meta property="twitter:creator" content="@Quorum360">
+
+    <link rel="canonical" href="https://quorum360.com/">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Establece el modo de compatibilidad del navegador.-->
+    <link rel="icon" href="/src/assets/iconos/quorum360.ico" type="image/x-icon"><!--Establece el icono de la página.-->
+    <link rel="stylesheet" type="text/css" href="/src/styles/configuraciones.css">
+    <!--Establece la hoja de estilos de la página.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--Establece un enlace de navegación.-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Quorum360</title><!--Establece el título de la página.-->
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Quorum360",
+            "description": "Software de gestión administrativa para propiedad horizontal en Colombia",
+            "operatingSystem": "Web",
+            "applicationCategory": "BusinessApplication",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+            }
+    </script>
+</head>
+<body>
+    <div class="configuracion-container">
+        <aside class="sidebar">
+            <div class="logo-config">
+                <img src="/src/assets/image/Q360.png" alt="Quorum360">
+            </div>
+            <nav class="config-menu">
+                <ul>
+                    <li class="active"><a href="#perfil"><i class="fas fa-user-cog"></i> Perfil</a></li>
+                    <li><a href="#conjunto"><i class="fas fa-building"></i> Conjunto Residencial</a></li>
+                    <li><a href="#modulos"><i class="fas fa-cubes"></i> Módulos</a></li>
+                    <li><a href="#usuarios"><i class="fas fa-users"></i> Usuarios</a></li>
+                    <li><a href="#seguridad"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="config-content">
+            <div class="config-header">
+                <h1><i class="fas fa-cogs"></i> Panel de Configuración</h1>
+                <div class="user-info">
+                    <span>Bienvenido, <strong id="current-user">Nombre Usuario</strong></span>
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+            <section id="perfil" class="config-section active">
+                <h2><i class="fas fa-user-edit"></i> Configuración de Perfil</h2>
+                <form id="profile-form" class="config-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="identificacion">Identificación</label>
+                            <input type="text" id="identificacion" name="identificacion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-identificacion">Tipo de Identificación</label>
+                            <select id="tipo-identificacion" name="tipo-identificacion" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="cc">Cédula de Ciudadanía</option>
+                                <option value="ce">Cédula de Extranjería</option>
+                                <option value="nit">NIT</option>
+                                <option value="pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-save"><i class="fas fa-save"></i> Guardar Cambios</button>
+                </form>
+            </section>
+
+            <section id="conjunto" class="config-section">
+                <h2><i class="fas fa-building"></i> Configuración del Conjunto Residencial</h2>
+                <form id="property-form" class="config-form">
+                    <div class="form-group">
+                        <label for="nombre-conjunto">Nombre del Conjunto Residencial</label>
+                        <input type="text" id="nombre-conjunto" name="nombre-conjunto" required>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tipo-propiedad">Tipo de Propiedad</label>
+                            <select id="tipo-propiedad" name="tipo-propiedad" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="ph">Propiedad Horizontal</option>
+                                <option value="condominio">Condominio</option>
+                                <option value="conjunto-cerrado">Conjunto Cerrado</option>
+                                <option value="edificio">Edificio</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="num-unidades">Número de Unidades</label>
+                            <input type="number" id="num-unidades" name="num-unidades" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" name="ciudad" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción (Opcional)</label>
+                        <textarea id="descripcion" name="descripcion" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-save"><i class="fas fa-save"></i> Guardar Configuración</button>
+                </form>
+            </section>
+
+            <section id="modulos" class="config-section">
+                <h2><i class="fas fa-cubes"></i> Módulos a Habilitar</h2>
+                <form id="modules-form" class="config-form">
+                    <div class="modules-grid">
+                        <div class="module-card">
+                            <input type="checkbox" id="modulo-contabilidad" name="modulos" value="contabilidad">
+                            <label for="modulo-contabilidad">
+                                <div class="module-icon"><i class="fas fa-calculator"></i></div>
+                                <h3>Contabilidad</h3>
+                                <p>Gestión financiera y reportes contables</p>
+                            </label>
+                        </div>
+
+                        <div class="module-card">
+                            <input type="checkbox" id="modulo-cobros" name="modulos" value="cobros">
+                            <label for="modulo-cobros">
+                                <div class="module-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                <h3>Cobros</h3>
+                                <p>Administración de pagos y cartera</p>
+                            </label>
+                        </div>
+
+                        <div class="module-card">
+                            <input type="checkbox" id="modulo-comunicacion" name="modulos" value="comunicacion">
+                            <label for="modulo-comunicacion">
+                                <div class="module-icon"><i class="fas fa-comments"></i></div>
+                                <h3>Comunicación</h3>
+                                <p>Mensajería y notificaciones</p>
+                            </label>
+                        </div>
+
+                        <div class="module-card">
+                            <input type="checkbox" id="modulo-asambleas" name="modulos" value="asambleas">
+                            <label for="modulo-asambleas">
+                                <div class="module-icon"><i class="fas fa-users"></i></div>
+                                <h3>Asambleas</h3>
+                                <p>Gestión de reuniones y votaciones</p>
+                            </label>
+                        </div>
+
+                        <div class="module-card">
+                            <input type="checkbox" id="modulo-mantenimiento" name="modulos" value="mantenimiento">
+                            <label for="modulo-mantenimiento">
+                                <div class="module-icon"><i class="fas fa-tools"></i></div>
+                                <h3>Mantenimiento</h3>
+                                <p>Solicitudes y gestión de servicios</p>
+                            </label>
+                        </div>
+
+                        <div class="module-card">
+                            <input type="checkbox" id="modulo-seguridad" name="modulos" value="seguridad">
+                            <label for="modulo-seguridad">
+                                <div class="module-icon"><i class="fas fa-shield-alt"></i></div>
+                                <h3>Seguridad</h3>
+                                <p>Control de acceso y visitantes</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-save"><i class="fas fa-save"></i> Guardar Módulos</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="usuarios" class="config-section">
+                <h2><i class="fas fa-users"></i> Gestión de Usuarios</h2>
+                <div class="users-management">
+                    <div class="users-list-container">
+                        <div class="users-list-header">
+                            <h3>Usuarios Registrados</h3>
+                            <button id="add-user-btn" class="btn-add"><i class="fas fa-plus"></i> Agregar
+                                Usuario</button>
+                        </div>
+                        <div class="users-list">
+                            <!-- Lista de usuarios se cargará dinámicamente -->
+                        </div>
+                    </div>
+
+                    <div class="user-form-container">
+                        <form id="user-form" class="config-form">
+                            <h3 id="user-form-title">Nuevo Usuario</h3>
+                            <input type="hidden" id="user-id" name="user-id">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="user-nombre">Nombre</label>
+                                    <input type="text" id="user-nombre" name="user-nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-apellido">Apellido</label>
+                                    <input type="text" id="user-apellido" name="user-apellido" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-email">Correo Electrónico</label>
+                                    <input type="email" id="user-email" name="user-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-rol">Rol</label>
+                                    <select id="user-rol" name="user-rol" required>
+                                        <option value="">Seleccionar...</option>
+                                        <option value="admin">Administrador</option>
+                                        <option value="residente">Residente</option>
+                                        <option value="proveedor">Proveedor</option>
+                                        <option value="vigilancia">Vigilancia</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-password">Contraseña</label>
+                                    <input type="password" id="user-password" name="user-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-confirm-password">Confirmar Contraseña</label>
+                                    <input type="password" id="user-confirm-password" name="user-confirm-password">
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" id="cancel-user-btn" class="btn-cancel">Cancelar</button>
+                                <button type="submit" class="btn-save"><i class="fas fa-save"></i> Guardar
+                                    Usuario</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seguridad" class="config-section">
+                <h2><i class="fas fa-shield-alt"></i> Configuración de Seguridad</h2>
+                <form id="security-form" class="config-form">
+                    <div class="form-group">
+                        <label for="current-password">Contraseña Actual</label>
+                        <input type="password" id="current-password" name="current-password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-password">Nueva Contraseña</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Nueva Contraseña</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+
+                    <div class="password-strength">
+                        <div class="strength-meter">
+                            <div class="strength-bar"></div>
+                        </div>
+                        <span class="strength-text">Seguridad de la contraseña: <span
+                                id="strength-value">Débil</span></span>
+                    </div>
+
+                    <div class="security-options">
+                        <h3>Opciones de Seguridad</h3>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="two-factor" name="two-factor">
+                            <label for="two-factor">Autenticación de dos factores (2FA)</label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="session-timeout" name="session-timeout" checked>
+                            <label for="session-timeout">Cierre de sesión automático después de 30 minutos de
+                                inactividad</label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="login-notifications" name="login-notifications" checked>
+                            <label for="login-notifications">Notificaciones por correo electrónico cuando se inicie
+                                sesión desde un nuevo dispositivo</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-save"><i class="fas fa-save"></i> Actualizar Configuración de
+                        Seguridad</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="/src/js/configuraciones.js"></script>
+</body>
+
+</html>

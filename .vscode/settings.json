@@ -11,5 +11,6 @@
         "Sesión",
         "Soporte",
         "utiliza"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
